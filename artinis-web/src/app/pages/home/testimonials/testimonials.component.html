@@ -1,0 +1,15 @@
+<section class="py-5 bg-white">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-5">{{ 'TESTIMONIALS.TITLE' | translate }}</h2>
+      <div class="row g-4">
+        <div class="col-md-4" *ngFor="let testimonial of [1,2,3]">
+          <div class="p-4 border rounded shadow-sm h-100">
+            <p class="fst-italic text-muted mb-3">“{{ 'TESTIMONIALS.T' + testimonial + '.QUOTE' | translate }}”</p>
+            <p class="fw-bold mb-0">{{ 'TESTIMONIALS.T' + testimonial + '.NAME' | translate }}</p>
+            <small class="text-muted">{{ 'TESTIMONIALS.T' + testimonial + '.ROLE' | translate }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+  

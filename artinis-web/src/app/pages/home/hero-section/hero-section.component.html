@@ -1,0 +1,30 @@
+<section class="bg-light py-5">
+    <div class="container">
+      <div class="row align-items-center flex-column-reverse flex-lg-row">
+        
+        <!-- Left: Text Content -->
+        <div class="col-lg-6 text-center text-lg-start">
+          <h1 class="display-4 fw-bold mb-3">
+            {{ 'HERO.TITLE' | translate }}
+          </h1>
+          <p class="lead text-muted mb-4">
+            {{ 'HERO.SUBTITLE' | translate }}
+          </p>
+          <a routerLink="/book-a-demo" class="btn btn-success btn-lg">
+            {{ 'HERO.CTA' | translate }}
+          </a>
+        </div>
+  
+        <!-- Right: Hero Image -->
+        <div class="col-lg-6 text-center mb-4 mb-lg-0">
+          <img
+            src="assets/images/hero-image.png"
+            alt="Smart Farming"
+            class="img-fluid"
+            style="max-height: 400px"
+          />
+        </div>
+      </div>
+    </div>
+</section>
+  

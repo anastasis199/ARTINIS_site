@@ -1,0 +1,102 @@
+{
+    "NAV": {
+        "HOME": "Home",
+        "ABOUT": "About",
+        "CONTACT": "Contact",
+        "BOOK": "Book a Demo",
+        "PRODUCTS": {
+        "TITLE": "Products",
+        "IOT": "IoT Product"
+        }
+    },
+    "HERO": {
+        "TITLE": "Smarter Farming Starts Here",
+        "SUBTITLE": "FarmControl connects and automates your farm with real-time data and IoT technology.",
+        "CTA": "Book a Demo"
+    },
+    "FEATURES": {
+        "TITLE": "Why Choose FarmControl",
+        "FEATURE1": {
+            "TITLE": "Real-Time Monitoring",
+            "DESC": "Access live data from sensors across your entire farm."
+        },
+        "FEATURE2": {
+            "TITLE": "Automation Made Easy",
+            "DESC": "Control irrigation, lighting, and more remotely."
+        },
+        "FEATURE3": {
+            "TITLE": "Analytics & Insights",
+            "DESC": "Make better decisions with AI-driven analytics."
+        }
+    },
+    "PLATFORM": {
+        "TITLE": "A Complete Farm Management Ecosystem",
+        "DESCRIPTION": "From soil sensors to cloud dashboards, FarmControl seamlessly integrates all parts of your operation."
+    },
+    "TESTIMONIALS": {
+        "TITLE": "What Our Clients Say",
+        "T1": {
+            "QUOTE": "FarmControl transformed the way we manage our crops.",
+            "NAME": "Carlos Ribeiro",
+            "ROLE": "Agritech Manager, GreenFields"
+        },
+        "T2": {
+            "QUOTE": "With remote monitoring, we reduced water usage by 40%.",
+            "NAME": "Sofia Almeida",
+            "ROLE": "Irrigation Specialist"
+        },
+        "T3": {
+            "QUOTE": "The platform is intuitive and powerful.",
+            "NAME": "João Costa",
+            "ROLE": "Smart Farm Owner"
+        }
+    },
+    "PARTNERS": {
+        "TITLE": "Our Trusted Partners",
+        "DESC": "We collaborate with leading companies to bring you the best technology."
+    },
+    "CTA": {
+        "TITLE": "Ready to modernize your farm?",
+        "SUBTITLE": "Contact us today to learn how FarmControl can help.",
+        "BUTTON": "Contact Us"
+    },
+    "ABOUT": {
+        "TITLE": "About Us",
+        "INTRO": "FarmControl is dedicated to revolutionizing agriculture through cutting-edge IoT technology, making farm management smarter, more efficient, and data-driven.",
+        
+        "MISSION": {
+            "TITLE": "Our Mission",
+            "BODY": "To empower farmers worldwide with advanced tools for monitoring and automating their operations through real-time data and intelligent control systems."
+        },
+
+        "VALUES": {
+            "TITLE": "Our Values",
+            "V1": "Innovation at every step",
+            "V2": "Sustainability and impact",
+            "V3": "Customer-first approach"
+        },
+
+        "DESC1": "FarmControl was born from the need to simplify and modernize agricultural tasks using technology. Our team of engineers and agronomists collaborates to build solutions tailored for the challenges of modern farming.",
+        "DESC2": "With real-time dashboards, sensor integrations, and automation tools, we bridge the gap between traditional farming and digital transformation.",
+        "DESC3": "Whether you're managing a greenhouse or a large-scale livestock farm, FarmControl provides the tools you need to improve yields, save resources, and make informed decisions."
+    },
+    "FOOTER": {
+        "DESCRIPTION": "FarmControl provides a complete ecosystem for remote monitoring and automation of agriculture and livestock farms.",
+        "NAVIGATION": {
+        "TITLE": "Navigation",
+        "HOME": "Home",
+        "ABOUT": "About",
+        "CONTACT": "Contact",
+        "BOOK": "Book a Demo"
+        },
+        "PRODUCTS": {
+        "TITLE": "Products",
+        "IOT": "IoT Product"
+        },
+        "CONTACT": {
+        "TITLE": "Contact",
+        "ADDRESS": "Rua das Flores, nº 123, 4560-789 Porto, Portugal"
+        },
+        "COPYRIGHT": "© {{year}} FarmControl. All rights reserved."
+    }
+}

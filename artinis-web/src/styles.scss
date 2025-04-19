@@ -1,0 +1,127 @@
+// 1️⃣ Import Bootstrap core functions
+@import "bootstrap/scss/functions";
+
+// 2️⃣ Override Bootstrap variables BEFORE importing Bootstrap
+$theme-colors: (
+  "primary": #3e965f,       // FarmControl green (main CTA/button color)
+  "secondary": #36454f,     // Dark slate gray (used for header/footer backgrounds)
+  "success": #70c57f,       // Light green (used for icons or hover effects)
+  "info": #94d2bd,          // Minty green/blue (highlight or section bg)
+  "warning": #ffd166,       // Light yellow/orange accent
+  "danger": #ef476f,        // Pinkish red (for error or alerts)
+  "light": #f8f9fa,         // Very light gray (backgrounds)
+  "dark": #212529           // Almost black (text and base elements)
+);
+
+
+// Define CSS variables so you can also use them in component CSS
+:root {
+  @each $name, $color in $theme-colors {
+    --#{$name}: #{$color};
+  }
+}
+
+// 3️⃣ Import Bootstrap's required components
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+// 4️⃣ Import Bootstrap after customizing variables
+@import "bootstrap/scss/bootstrap";
+
+.rounded {
+  border-radius: 1rem !important;
+}
+.text-bold {
+  font-weight: bold;
+}
+// Custom Buttons
+.btn-black {
+  background-color: black; // map-get($theme-colors, "dark");
+  color: map-get($theme-colors, "light");
+  border: none;
+  padding: 10px 35px;
+  border-radius: 5px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  &:hover {
+    background-color: map-get($theme-colors, "primary");
+    color: map-get($theme-colors, "light");
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.btn-white {
+  background-color: white;
+  color: map-get($theme-colors, "dark");
+  border: 1px solid transparent;
+  padding: 10px 35px;
+  border-radius: 5px;
+  border-color: map-get($theme-colors, "light");
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: map-get($theme-colors, "dark");
+  }
+}
+
+.hero-section {
+  background: linear-gradient(-30deg, #010815 50%, #0f52ba 100%);
+  padding: 50px 0;
+  position: relative;
+  border-radius: 25px;
+}
+.hero-section-inv {
+  background: linear-gradient(180deg, #010815 25%, #0f52ba 100%);
+  position: relative;
+  border-radius: 25px;
+}
+
+// Change the font size for all texts
+body {
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+/* Underline animation */
+.fadeInLine::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.fadeInLineRightToLeft::after {
+  content: "";
+  position: absolute;
+  right: 0; /* Start from right instead of left */
+  bottom: -3px;
+  width: 0; /* Start with 0 width */
+  height: 2px;
+  background-color: white;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+/* Fading effect when switching tabs */
+@keyframes fadeIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+/* You can add global styles to this file, and also import other style files */
