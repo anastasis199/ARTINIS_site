@@ -1,0 +1,103 @@
+<header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <h1 class="text-2xl font-bold text-primary">ARTINIS</h1>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <button (click)="scrollToSection('services')" class="text-foreground hover:text-primary transition-colors cursor-pointer">
+          Solutions
+        </button>
+        <button (click)="scrollToSection('industries')" class="text-foreground hover:text-primary transition-colors cursor-pointer">
+          Industries
+        </button>
+        <button (click)="scrollToSection('methodology')" class="text-foreground hover:text-primary transition-colors cursor-pointer">
+          Methodology
+        </button>
+        <button (click)="scrollToSection('insights')" class="text-foreground hover:text-primary transition-colors cursor-pointer">
+          Insights
+        </button>
+        <button (click)="scrollToSection('contact')" class="text-foreground hover:text-primary transition-colors cursor-pointer">
+          About
+        </button>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden md:flex">
+        <button
+          class="bg-primary text-white px-4 py-2 rounded-lg text-lg cursor-pointer"
+          (click)="scrollToSection('demo')"
+        >
+          Get a Demo
+        </button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button
+          class="p-2 rounded-lg hover:bg-gray-200"
+          (click)="toggleMenu()"
+          aria-label="Toggle menu"
+        >
+          <svg *ngIf="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg *ngIf="isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div *ngIf="isMenuOpen" class="md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 bg-background border-t">
+        <button
+          (click)="scrollToSection('services')"
+          class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors w-full text-left"
+        >
+          Solutions
+        </button>
+        <button
+          (click)="scrollToSection('industries')"
+          class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors w-full text-left"
+        >
+          Industries
+        </button>
+        <button
+          (click)="scrollToSection('methodology')"
+          class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors w-full text-left"
+        >
+          Methodology
+        </button>
+        <button
+          (click)="scrollToSection('insights')"
+          class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors w-full text-left"
+        >
+          Insights
+        </button>
+        <button
+          (click)="scrollToSection('contact')"
+          class="block px-3 py-2 text-base font-medium text-foreground hover:text-primary transition-colors w-full text-left"
+        >
+          About
+        </button>
+        <div class="px-3 py-2">
+          <button
+            class="bg-primary text-white px-4 py-2 rounded-lg w-full text-lg"
+            (click)="scrollToSection('demo')"
+          >
+            Get a Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

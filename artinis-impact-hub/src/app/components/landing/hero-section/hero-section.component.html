@@ -1,0 +1,96 @@
+<section class="relative min-h-screen flex items-center overflow-hidden">
+  <!-- Background Image with Overlay -->
+  <div class="absolute inset-0">
+    <img
+      src="assets/hero-split-screen.jpg"
+      alt="AI technology transforming agriculture and healthcare"
+      class="w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Left Column - Text Content -->
+      <div class="animate-slide-in-left">
+        <div class="max-w-2xl">
+          <!-- Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            From <span class="text-primary">AI Insight</span>
+            to <span class="text-secondary">Real-World Impact</span>
+          </h1>
+
+          <!-- Sub-header -->
+          <p class="text-xl sm:text-2xl text-muted-foreground mb-8 leading-relaxed">
+            Edge-ready AI that turns sensor and clinical data into real-time decisions.
+          </p>
+
+          <!-- Key Benefits -->
+          <div class="mb-10 space-y-3">
+            <div class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-primary rounded-full"></div>
+              <p class="text-lg text-foreground">Physics-aware deep learning for precision agriculture</p>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-secondary rounded-full"></div>
+              <p class="text-lg text-foreground">GDPR-ready AI for healthcare applications</p>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-primary rounded-full"></div>
+              <p class="text-lg text-foreground">Edge deployment for real-time processing</p>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button
+              class="bg-primary text-white px-6 py-3 rounded-lg text-xl flex items-center justify-center group cursor-pointer"
+              (click)="scrollToDemo()"
+            >
+              Get a Demo
+              <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </button>
+            <button
+              class="border border-primary text-primary px-6 py-3 rounded-lg text-xl flex items-center justify-center group cursor-pointer"
+              (click)="scrollToMethodology()"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-4.197-2.42A1 1 0 009 9.58v4.84a1 1 0 001.555.832l4.197-2.42a1 1 0 000-1.664z" />
+              </svg>
+              See How It Works
+            </button>
+          </div>
+
+          <!-- Trust Indicators -->
+          <div class="mt-12 pt-8 border-t border-border/20">
+            <p class="text-sm text-muted-foreground mb-4">Trusted by organizations in:</p>
+            <div class="flex flex-wrap gap-6 text-sm font-medium text-foreground">
+              <span>Agriculture</span>
+              <span>•</span>
+              <span>Healthcare</span>
+              <span>•</span>
+              <span>Livestock</span>
+              <span>•</span>
+              <span>Public Sector</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column - Image placeholder for split-screen effect -->
+      <div class="hidden lg:block animate-slide-in-right">
+        <!-- This space is for the background image split-screen effect -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+      <div class="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
+    </div>
+  </div>
+</section>

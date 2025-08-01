@@ -1,0 +1,124 @@
+<section id="industries" class="py-20 bg-background">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16 animate-fade-in-up">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        Industries We <span class="text-primary">Transform</span>
+      </h2>
+      <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+        Specialized AI solutions tailored to the unique challenges and opportunities
+        in agriculture, healthcare, livestock management, and public sector applications.
+      </p>
+    </div>
+
+    <!-- Industry Tabs -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <button
+        *ngFor="let industry of industries; let i = index"
+        (click)="setActiveTab(i)"
+        [ngClass]="
+          activeTab === i
+            ? 'bg-primary text-white'
+            : 'border border-primary text-primary'
+        "
+        class="flex items-center space-x-2 px-4 py-2 rounded-lg text-lg transition-all duration-300 cursor-pointer"
+      >
+        <ng-container [ngSwitch]="industry.icon">
+          <svg *ngSwitchCase="'wheat'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M12 2v20M7 7h10M7 17h10" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <svg *ngSwitchCase="'beef'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M5 5h14v14H5z" stroke-width="2" />
+          </svg>
+          <svg *ngSwitchCase="'heart'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path
+              d="M12 21C12 21 3 13.7 3 7.5C3 4.4 5.4 2 8.5 2C10.2 2 11.7 2.9 12 4.3C12.3 2.9 13.8 2 15.5 2C18.6 2 21 4.4 21 7.5C21 13.7 12 21 12 21Z"
+              stroke-width="2"
+            />
+          </svg>
+          <svg *ngSwitchCase="'building2'" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M4 22h16V2H4v20zM9 22v-6h6v6" stroke-width="2" />
+          </svg>
+        </ng-container>
+        <span>{{ industry.name }}</span>
+      </button>
+    </div>
+
+    <!-- Active Industry Content -->
+    <div class="animate-fade-in-up">
+      <div class="max-w-6xl mx-auto border border-border/50 shadow-lg rounded-lg bg-card">
+        <div class="text-center p-6">
+          <h3 class="text-2xl sm:text-3xl font-bold text-foreground mb-4">
+            {{ industries[activeTab].title }}
+          </h3>
+          <p class="text-lg text-muted-foreground max-w-4xl mx-auto">
+            {{ industries[activeTab].description }}
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 p-8">
+          <!-- Features & Capabilities -->
+          <div>
+            <h4 class="text-xl font-semibold text-foreground mb-6">Key Capabilities</h4>
+            <ul class="space-y-4">
+              <li *ngFor="let feature of industries[activeTab].features" class="flex items-start space-x-3">
+                <div class="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                <span class="text-foreground leading-relaxed">{{ feature }}</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Metrics & Case Study -->
+          <div>
+            <h4 class="text-xl font-semibold text-foreground mb-6">Proven Results</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+              <div
+                *ngFor="let metric of industries[activeTab].metrics"
+                class="text-center p-4 bg-gradient-tech rounded-lg"
+              >
+                <div class="text-2xl font-bold text-primary mb-1">
+                  {{ metric.split(' ')[0] }}
+                </div>
+                <div class="text-sm text-muted-foreground">
+                  {{ metric.split(' ').slice(1).join(' ') }}
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 bg-accent rounded-lg">
+              <h5 class="font-semibold text-accent-foreground mb-3">Case Study</h5>
+              <p class="text-accent-foreground/80 leading-relaxed">
+                {{ industries[activeTab].caseStudy }}
+              </p>
+              <button
+                (click)="scrollToDemo()"
+                class="mt-4 inline-flex items-center text-primary hover:text-primary-hover cursor-pointer"
+              >
+                Learn more about this solution
+                <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center mt-16">
+      <p class="text-lg text-muted-foreground mb-6">
+        Don't see your industry? We develop custom AI solutions for any domain.
+      </p>
+      <button
+        (click)="scrollToDemo()"
+        class="bg-primary text-white px-8 py-3 rounded-lg text-xl flex items-center justify-center cursor-pointer"
+      >
+        Discuss Your Use Case
+        <svg class="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
