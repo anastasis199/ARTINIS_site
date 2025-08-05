@@ -36,7 +36,7 @@ export class MethodologySectionComponent {
       title: 'DECIDE',
       subtitle: 'AI-Powered Analysis',
       description:
-        'Apply physics-aware deep learning, specialized LLMs, and computer vision models to extract insights and generate actionable recommendations.',
+        'Apply physics-aware and explainable deep learning, specialized LLMs, and computer vision models to extract insights and generate actionable recommendations.',
       details: [
         'Physics-informed neural networks',
         'Domain-specific LLMs',

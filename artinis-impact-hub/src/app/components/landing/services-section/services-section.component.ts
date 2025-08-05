@@ -28,7 +28,7 @@ export class ServicesSectionComponent {
       icon: 'brain',
       title: 'LLM Assistants',
       description:
-        'Specialized language models trained on domain-specific data for healthcare, agriculture, and technical applications with GDPR compliance.',
+        'Specialized language models trained on domain-specific data for healthcare, livestock, and technical applications with GDPR compliance.',
       features: ['Domain expertise', 'GDPR compliance', 'Custom training', 'Multi-language support'],
     },
     {
