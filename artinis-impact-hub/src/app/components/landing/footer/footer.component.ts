@@ -14,7 +14,6 @@ export class FooterComponent {
     { name: 'Solutions', href: '#services' },
     { name: 'Industries', href: '#industries' },
     { name: 'Methodology', href: '#methodology' },
-    { name: 'Insights', href: '#insights' },
     { name: 'About', href: '#contact' },
   ];
 
