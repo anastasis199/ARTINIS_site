@@ -23,16 +23,15 @@ export class IndustriesSectionComponent {
   industries: Industry[] = [
     {
       icon: 'wheat',
-      name: 'Agriculture',
+      name: 'Controlled Environment Agriculture',
       title: 'Precision Agriculture & Crop Intelligence',
       description:
         'Transform farming with AI-powered insights that optimize yield, reduce resource consumption, and enable sustainable agriculture practices.',
       features: [
-        'Crop health monitoring using satellite and drone imagery',
-        'Soil condition analysis with IoT sensor networks',
-        'Weather prediction models for optimal planting',
-        'Automated irrigation systems with ML optimization',
-        'Pest and disease early detection systems',
+        'Crop monitoring (cultivation management and harvest forecast)',
+        'Microclimate management',
+        'Irrigation and nutrient scheduling (hydroponics)',
+        'Pest and diseases detection',
       ],
       metrics: [
         '40% reduction in water usage',

@@ -1,4 +1,5 @@
 import { NgIf } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -20,6 +21,7 @@ export class DemoSectionComponent  {
     useCase: '',
     message: ''
   };
+  constructor(private http: HttpClient) {}
 
   handleInputChange(field: string, value: string) {
     this.formData[field as keyof typeof this.formData] = value;
@@ -33,10 +35,28 @@ export class DemoSectionComponent  {
       alert('Please fill in all required fields');
       return;
     }
+    const url = "https://formcarry.com/s/XscwxojVzLA";
+    const body = {
+      name: this.formData.name,
+      email: this.formData.email,
+      company: this.formData.company,
+      phone: this.formData.phone,
+      industry: this.formData.industry,
+      useCase: this.formData.useCase,
+      message: this.formData.message
+    };
 
-    console.log('Demo request submitted:', this.formData);
-    this.isSubmitted = true;
-    alert("Demo request submitted successfully! We'll contact you within 24 hours.");
+    this.http.post(url, body).subscribe({
+      next: (response) => {
+        console.log('Form submitted successfully:', response);
+        this.resetForm();
+        this.isSubmitted = true;
+      },
+      error: (error) => {
+        console.error('Error submitting form:', error);
+        alert('There was an error submitting your request. Please try again later.');
+      }
+    });
   }
 
   resetForm() {

@@ -25,7 +25,7 @@ export class FooterComponent {
   ];
 
   industries = [
-    { name: 'Agriculture', href: '#industries' },
+    { name: 'Controlled Environment Agriculture', href: '#industries' },
     { name: 'Livestock', href: '#industries' },
     { name: 'Healthcare', href: '#industries' },
     { name: 'Public Sector', href: '#industries' },
