@@ -35,7 +35,7 @@ export class DemoSectionComponent  {
       alert('Please fill in all required fields');
       return;
     }
-    const url = "https://formcarry.com/s/XscwxojVzLA";
+    const url = "https://formcarry.com/s/B7hHDOJf5rW";
     const body = {
       name: this.formData.name,
       email: this.formData.email,
